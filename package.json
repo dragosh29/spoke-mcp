@@ -1,0 +1,41 @@
+{
+  "name": "spoke-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Spoke Dispatch: lets Claude, ChatGPT and other MCP clients read plans, stops, routes, drivers, depots and optimization operations, and (when enabled) create plans, import stops, optimize and distribute plans.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "npm run build && node test/e2e.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "spoke",
+    "claude",
+    "logistics"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^7.0.2"
+  },
+  "type": "module",
+  "bin": {
+    "spoke-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
